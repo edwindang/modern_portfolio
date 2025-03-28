@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useScroll } from "framer-motion"
+import { motion } from "framer-motion"
 import DevelopmentImpactAnimation from "./DevelopmentImpactAnimation"
 
 export default function AboutSection() {

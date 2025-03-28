@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Code, Github, Linkedin, Mail, User } from "lucide-react";
+import { ArrowRight, Code, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import AboutSection from "@/components/ui/AboutSection";
