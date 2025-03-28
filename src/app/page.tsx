@@ -7,18 +7,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Code, Github, Linkedin, Mail, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
-import { GoDatabase } from "react-icons/go";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { IoPieChartOutline } from "react-icons/io5";
 import AboutSection from "@/components/ui/AboutSection";
 import SkillsSection from "@/components/ui/SkillsSection";
-
-
-
-import {projects} from '../components/ui/projects'
-import { BsPersonFillGear } from "react-icons/bs";
-
+import {projects} from "../components/ui/projects"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -32,7 +23,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
-  const sections = ["home", "about", "projects", "memos", "contact"];
+  const sections = ["home", "about", "skills", "projects", "memos", "contact"];
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   // Register refs for each section
@@ -58,7 +49,7 @@ export default function Portfolio() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -134,7 +125,7 @@ export default function Portfolio() {
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Hi, I'm <span className="text-primary">Edwin</span>
+              Hi, I&apos;m <span className="text-primary">Edwin</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-[700px]">
             Technical Product Manager | Software Developer | Investor Welcome to my Portfolio!
@@ -385,7 +376,6 @@ function ProjectCard({
   tags,
   imageUrl,
   viewCode,
-  Demo,
 }: {
   title: string;
   description: string;

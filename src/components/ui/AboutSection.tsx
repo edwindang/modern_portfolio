@@ -1,15 +1,15 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll } from "framer-motion"
 import DevelopmentImpactAnimation from "./DevelopmentImpactAnimation"
 
 export default function AboutSection() {
   const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  })
+//   const { scrollYProgress } = useScroll({
+//     target: containerRef,
+//     offset: ["start end", "end start"],
+//   })
 
 
   return (
@@ -45,7 +45,7 @@ export default function AboutSection() {
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">Who I Am</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            I'm a Technical Product Manager building AI-powered software products from 0 to 1 
+            I&apos;m a Technical Product Manager building AI-powered software products from 0 to 1 
                 at a healthcare technology company. I thrive at the intersection of engineering and 
                 product, working cross-functionally to ship products that reimagine how we work. 
                 With a background in software development, I still build side projects that explore 
