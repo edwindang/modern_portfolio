@@ -106,7 +106,7 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section
         id="home"
-        ref={(el) => (sectionRefs.current.home = el)}
+        ref={(el) => {(sectionRefs.current.home = el)}}
         className="pt-32 pb-16 md:pt-40 md:pb-24"
       >
         <div className="container px-4 md:px-6">
@@ -178,7 +178,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section
         id="projects"
-        ref={(el) => (sectionRefs.current.projects = el)}
+        ref={(el) => {(sectionRefs.current.projects = el)}}
         className="py-16 md:py-24"
       >
         <div className="container px-4 md:px-6">
@@ -213,7 +213,7 @@ export default function Portfolio() {
       {/* Memos Section */}
       <section
         id="memos"
-        ref={(el) => (sectionRefs.current.memos = el)}
+        ref={(el) => {(sectionRefs.current.memos = el)}}
         className="py-16 md:py-24 bg-muted/50"
       >
         <div className="container px-4 md:px-6">
@@ -245,7 +245,7 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section
         id="contact"
-        ref={(el) => (sectionRefs.current.contact = el)}
+        ref={(el) => {(sectionRefs.current.contact = el)}}
         className="py-16 md:py-24"
       >
         <div className="container px-4 md:px-6">

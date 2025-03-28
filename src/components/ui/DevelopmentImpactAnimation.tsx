@@ -41,7 +41,7 @@ export default function DevelopmentImpactAnimation() {
   const stageVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20, position: "absolute" },
+    exit: { opacity: 0, y: -20},
   }
 
   // Content for each stage
@@ -305,7 +305,7 @@ export default function DevelopmentImpactAnimation() {
             exit="exit"
             variants={stageVariants}
             transition={{ duration: 0.5 }}
-            className="h-full w-full"
+            className="h-full w-full absolute"
           >
             {stages[currentStage].content}
           </motion.div>
