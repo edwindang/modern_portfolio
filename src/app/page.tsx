@@ -376,6 +376,7 @@ function ProjectCard({
   tags,
   imageUrl,
   viewCode,
+  Demo,
 }: {
   title: string;
   description: string;
@@ -410,12 +411,12 @@ function ProjectCard({
       <CardFooter>
         <div className="flex gap-4">
           <Button variant="outline" size="sm" asChild>
-            <Link href={viewCode}>
+            <Link href={viewCode} target="_blank">
               <Code className="mr-2 h-4 w-4" /> View Code
             </Link>
           </Button>
           <Button size="sm" asChild>
-            <Link href="#">
+            <Link href={Demo} target="_blank">
               <ArrowRight className="mr-2 h-4 w-4" /> Demo
             </Link>
           </Button>

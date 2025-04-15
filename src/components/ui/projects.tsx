@@ -1,5 +1,16 @@
 export const projects = [
-    {
+  {
+      title: "AI-Powered Warehouse Crate and Package Counting System",
+      description: "Designed and built a computer vision system to automate package verification in a warehouse loading environment. The system leverages a 3-model architecture:" + 
+        "a YOLO-based crate detection model, meta's SAM2 mode, and a classification model to identify packages." +
+        "The pipeline processes real-time video inputs, enabling accurate package counts and package-type validation per crate.",
+      image: "",
+      tags: ["Machine Vision", "AI/ML Infrastructure", "Python", "AI training & Inference"],
+      source: "https://github.com/edwindang/AI_package_detector.git",
+      visit: "",
+      id: 0,
+  },  
+  {
       title: "TrackTap",
       description:
         "Built a web application that allows groups to collaboratively control a shared music playlist, enabling users to upvote \
@@ -8,17 +19,6 @@ export const projects = [
       tags: ["JavaScript", "Python", "C++", "HTML", "CSS"],
       source: "https://github.com/edwindang/TrackTap",
       visit: "https://tracktap.app/home",
-      id: 0,
-    },
-    {
-      title: "Building and Training Linear Classifiers and Neural Networks",
-      description:
-        "Implement linear classifiers and a neural network to feed \
-      training data into. Program reads training data and outputs a decision boundary for classification purposes.",
-      image: "/neuralnet.jpeg",
-      tags: ["Java", "gnuplot"],
-      source: "https://github.com/edwindang/linearClassifier/tree/master",
-      visit: "https://google.com",
       id: 1,
     },
     {
@@ -35,6 +35,17 @@ export const projects = [
       id: 2,
     },
     {
+      title: "Building and Training Linear Classifiers and Neural Networks",
+      description:
+        "Implement linear classifiers and a neural network to feed \
+      training data into. Program reads training data and outputs a decision boundary for classification purposes.",
+      image: "/neuralnet.jpeg",
+      tags: ["Java", "gnuplot"],
+      source: "https://github.com/edwindang/linearClassifier/tree/master",
+      visit: "https://google.com",
+      id: 3,
+    },
+    {
       title:
         "Quantifying Compensatory Movements in Individuals with Post-stroke Hemiparesis",
       description:
@@ -44,7 +55,7 @@ export const projects = [
       tags: ["Python", "Pandas", "SciPy", "Numpy", "MatPlotLib"],
       source: "https://github.com/edwindang/compensatory_movements",
       visit: "https://google.com",
-      id: 3,
+      id: 4,
     },
     {
       title:
@@ -54,8 +65,8 @@ export const projects = [
       image: "/images/website.jpeg",
       tags: ["Next.js", "TailWindCSS", "Typescript"],
       source: "https://github.com/edwindang/my_website",
-      visit: "https://edwindang.github.io/my_website/",
-      id: 4,
+      visit: "https://modern-portfolio-sable.vercel.app/",
+      id: 5,
     },
     /*
     {
