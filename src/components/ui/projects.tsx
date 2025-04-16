@@ -1,6 +1,6 @@
 export const projects = [
   {
-      title: "AI-Powered Warehouse Crate and Package Counting System",
+      title: "CrateAI",
       description: "Designed and built a computer vision system to automate package verification in a warehouse loading environment. The system leverages a 3-model architecture:" + 
         "a YOLO-based crate detection model, meta's SAM2 mode, and a classification model to identify packages." +
         "The pipeline processes real-time video inputs, enabling accurate package counts and package-type validation per crate.",
@@ -9,6 +9,19 @@ export const projects = [
       source: "https://github.com/edwindang/AI_package_detector.git",
       visit: "",
       id: 0,
+  },
+  {
+    title:
+      "TicTacToe AI",
+    description:
+      "Built an adversarial state-space search game with a minimax heuristic, alpha-beta pruning, and a fixed depth cutoff. \
+    Algorithms were implemented via a game of Tic-Tac-Toe, in which a user can play with the programmed AI computer opponent.",
+    image:
+      "/tictactoe.jpeg",
+    tags: ["Java"],
+    source: "https://github.com/edwindang/AI_games",
+    visit: "https://ai-tictactoe-beta.vercel.app/",
+    id: 1,
   },  
   {
       title: "TrackTap",
@@ -19,19 +32,6 @@ export const projects = [
       tags: ["JavaScript", "Python", "C++", "HTML", "CSS"],
       source: "https://github.com/edwindang/TrackTap",
       visit: "https://tracktap.app/home",
-      id: 1,
-    },
-    {
-      title:
-        "TicTacToe AI",
-      description:
-        "Built an adversarial state-space search game with a minimax heuristic, alpha-beta pruning, and a fixed depth cutoff. \
-      Algorithms were implemented via a game of Tic-Tac-Toe, in which a user can play with the programmed AI computer opponent.",
-      image:
-        "/tictactoe.jpeg",
-      tags: ["Java"],
-      source: "https://github.com/edwindang/AI_games",
-      visit: "https://google.com",
       id: 2,
     },
     {
