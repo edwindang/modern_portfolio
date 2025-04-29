@@ -10,6 +10,7 @@ import Image from "next/image";
 import AboutSection from "@/components/ui/AboutSection";
 import SkillsSection from "@/components/ui/SkillsSection";
 import {projects} from "../components/ui/projects"
+import {memos} from "../components/ui/memos"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -219,25 +220,26 @@ export default function Portfolio() {
         <div className="container px-4 md:px-6">
           <ScrollAnimatedSection>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Memos & Thoughts
+              Investment Memos
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {[1, 2, 3, 4].map((memo) => (
+              {memos.map((memo) => (
                 <MemoCard
-                  key={memo}
-                  title={`Memo Title ${memo}`}
-                  excerpt="This is a short excerpt from the memo that gives a brief overview of what it's about."
-                  date="Jan 15, 2024"
+                  key={memo.key}
+                  title={memo.title}
+                  excerpt={memo.description}
+                  date={memo.date}
+                  link={memo.source}
                 />
               ))}
             </div>
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
               <Button variant="outline" asChild>
                 <Link href="#">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-            </div>
+            </div> */}
           </ScrollAnimatedSection>
         </div>
       </section>
@@ -431,10 +433,12 @@ function MemoCard({
   title,
   excerpt,
   date,
+  link,
 }: {
   title: string;
   excerpt: string;
   date: string;
+  link: string;
 }) {
   return (
     <Card className="group">
@@ -449,7 +453,7 @@ function MemoCard({
       </CardContent>
       <CardFooter>
         <Button variant="ghost" size="sm" className="gap-1" asChild>
-          <Link href="#">
+          <Link href={link} target="_blank">
             Read More <ArrowRight className="h-4 w-4" />
           </Link>
         </Button>
