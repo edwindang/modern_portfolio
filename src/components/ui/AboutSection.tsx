@@ -1,21 +1,21 @@
 "use client"
 
-import { useRef } from "react"
+import { forwardRef, useRef } from "react"
 import { motion, useScroll } from "framer-motion"
 import DevelopmentImpactAnimation from "./DevelopmentImpactAnimation"
 
-export default function AboutSection() {
+const AboutSection = forwardRef<HTMLElement, {}>(function AboutSection(props, ref) {
   const containerRef = useRef<HTMLDivElement>(null)
-//   const { scrollYProgress } = useScroll({
-//     target: containerRef,
-//     offset: ["start end", "end start"],
-//   })
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  })
 
 
   return (
     <section
       id="about"
-      ref={containerRef}
+      ref={ref}
       className="py-20 md:py-32 relative overflow-hidden bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
     >
       {/* Animated background gradient */}
@@ -70,4 +70,6 @@ export default function AboutSection() {
       </div>
     </section>
   )
-}
+})
+
+export default AboutSection

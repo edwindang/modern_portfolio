@@ -4,7 +4,7 @@ export const projects = [
       description: "Designed and built a computer vision system to automate package verification in a warehouse loading environment. The system leverages a 3-model architecture:" + 
         "a YOLO-based crate detection model, meta's SAM2 mode, and a classification model to identify packages." +
         "The pipeline processes real-time video inputs, enabling accurate package counts and package-type validation per crate.",
-      image: "",
+      image: "/Warehouse.jpg",
       tags: ["Machine Vision", "AI/ML Infrastructure", "Python", "AI training & Inference"],
       source: "https://github.com/edwindang/AI_package_detector.git",
       visit: "",
@@ -62,7 +62,7 @@ export const projects = [
         "this.website",
       description:
         "My personal portfolio website code",
-      image: "/images/website.jpeg",
+      image: "/website.jpg",
       tags: ["Next.js", "TailWindCSS", "Typescript"],
       source: "https://github.com/edwindang/my_website",
       visit: "https://modern-portfolio-sable.vercel.app/",

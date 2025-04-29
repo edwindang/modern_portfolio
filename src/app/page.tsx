@@ -24,7 +24,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
-  const sections = ["home", "about", "skills", "projects", "memos", "contact"];
+  const sections = ["home", "about", "skills", "projects", "investment-memos", "contact"];
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   // Register refs for each section
@@ -117,9 +117,9 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center text-center space-y-4"
           >
-            <div className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-primary mb-4">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary mb-4">
               <Image
-                src="/me_zoom.jpeg"
+                src="/me_2_zoom.jpg"
                 alt="Profile"
                 fill
                 className="object-cover"
@@ -129,7 +129,9 @@ export default function Portfolio() {
               Hi, I&apos;m <span className="text-primary">Edwin</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-[700px]">
-            Technical Product Manager | Software Developer | Investor Welcome to my Portfolio!
+            Technical Product Manager | Software Developer
+            <br></br>
+            Welcome to my Portfolio!
             </p>
             <div className="flex gap-4 mt-6">
               <Button asChild>
@@ -171,10 +173,18 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <AboutSection />
+      <AboutSection 
+      ref={(el) => {
+        sectionRefs.current.about = el
+      }}
+      />
 
       {/* Skills Section */}
-      <SkillsSection />
+      <SkillsSection 
+      ref={(el) => {
+        sectionRefs.current.skills = el
+      }}
+      />
 
       {/* Projects Section */}
       <section
@@ -213,8 +223,8 @@ export default function Portfolio() {
 
       {/* Memos Section */}
       <section
-        id="memos"
-        ref={(el) => {(sectionRefs.current.memos = el)}}
+        id="investment-memos"
+        ref={(el) => {(sectionRefs.current["investment-memos"] = el)}}
         className="py-16 md:py-24 bg-muted/50"
       >
         <div className="container px-4 md:px-6">
@@ -320,7 +330,7 @@ export default function Portfolio() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Your Name. All rights reserved.
+                Xaipe
               </p>
             </div>
             <div className="flex gap-4">
