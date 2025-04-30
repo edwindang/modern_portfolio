@@ -42,7 +42,7 @@ export const projects = [
       image: "/neuralnet.jpeg",
       tags: ["Java", "gnuplot"],
       source: "https://github.com/edwindang/linearClassifier/tree/master",
-      visit: "https://google.com",
+      visit: "",
       id: 3,
     },
     {
@@ -54,7 +54,7 @@ export const projects = [
       image: "/compensatory.jpeg",
       tags: ["Python", "Pandas", "SciPy", "Numpy", "MatPlotLib"],
       source: "https://github.com/edwindang/compensatory_movements",
-      visit: "https://google.com",
+      visit: "https://drive.google.com/file/d/1_cWsapwA5iAg0kKfF1V-43ugEZToOlS_/view?usp=sharing",
       id: 4,
     },
     {

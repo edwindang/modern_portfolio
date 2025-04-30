@@ -428,9 +428,9 @@ function ProjectCard({
             </Link>
           </Button>
           <Button size="sm" asChild>
-            <Link href={Demo} target="_blank">
+            {Demo =="" ? null : <Link href={Demo} target="_blank">
               <ArrowRight className="mr-2 h-4 w-4" /> Demo
-            </Link>
+            </Link> }
           </Button>
         </div>
       </CardFooter>

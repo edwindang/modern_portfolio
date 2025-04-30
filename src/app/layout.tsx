@@ -11,10 +11,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Portfolio | Edwin Dang",
   description: "Personal portfolio showcasing my projects and skills",
-  icons:{
-    icon: [{url : '/personal_logo_mod.png', sizes: 'any'}],
-  }
-
+  icons: {
+    icon: [{ url: "/personal_logo_mod.jpeg", sizes: "any" }]
+  },
 }
 
 export default function RootLayout({
