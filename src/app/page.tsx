@@ -134,12 +134,12 @@ export default function Portfolio() {
             Welcome to my Portfolio!
             </p>
             <div className="flex gap-4 mt-6">
-              <Button asChild>
-                <Link href="#contact">
-                  Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+            <Button asChild>
+                <Link href="https://drive.google.com/file/d/1Vbej-MaLoRPmFYkS9GRfQPfgN8gynQwj/view?usp=sharing" target="_blank">
+                  View Resume <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button variant="secondary" asChild>
                 <Link href="#projects">View Projects</Link>
               </Button>
             </div>
