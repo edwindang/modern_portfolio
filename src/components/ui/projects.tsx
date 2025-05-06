@@ -64,7 +64,7 @@ export const projects = [
         "My personal portfolio website code",
       image: "/website.jpg",
       tags: ["Next.js", "TailWindCSS", "Typescript"],
-      source: "https://github.com/edwindang/my_website",
+      source: "https://github.com/edwindang/modern_portfolio.git",
       visit: "https://modern-portfolio-sable.vercel.app/",
       id: 5,
     },
