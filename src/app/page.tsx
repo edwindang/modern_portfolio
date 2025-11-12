@@ -58,7 +58,7 @@ export default function Portfolio() {
 
       {/* Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container mx-auto flex h-16 items-center justify-between">
           <Link href="#home" className="text-xl font-bold">
             Portfolio
           </Link>
@@ -111,7 +111,7 @@ export default function Portfolio() {
         ref={(el) => {(sectionRefs.current.home = el)}}
         className="pt-32 pb-16 md:pt-40 md:pb-24"
       >
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -136,7 +136,7 @@ export default function Portfolio() {
             </p>
             <div className="flex gap-4 mt-6">
             <Button asChild>
-                <Link href="https://drive.google.com/file/d/1agqz8UNMUiN6jr-JqC-5AjK2ij0AngGb/view?usp=sharing" target="_blank">
+                <Link href="https://drive.google.com/file/d/1ewfyoiSF3L3wsRGNJwsDgdh2WDOrUJLj/view?usp=sharing" target="_blank">
                   View Resume <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -193,11 +193,12 @@ export default function Portfolio() {
         ref={(el) => {(sectionRefs.current.projects = el)}}
         className="py-16 md:py-24"
       >
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollAnimatedSection>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               My Projects
             </h2>
+            <div className="mx-auto max-w-6xl">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
                 <ProjectCard
@@ -210,6 +211,7 @@ export default function Portfolio() {
                   Demo={project.visit}
                 />
               ))}
+              </div>
             </div>
             {/* <div className="text-center mt-12">
               <Button variant="outline" asChild>
@@ -228,11 +230,12 @@ export default function Portfolio() {
         ref={(el) => {(sectionRefs.current["investment-memos"] = el)}}
         className="py-16 md:py-24 bg-muted/50"
       >
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollAnimatedSection>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Investment Memos
             </h2>
+            <div className="mx-auto max-w-4xl">
             <div className="grid md:grid-cols-2 gap-8">
               {memos.map((memo) => (
                 <MemoCard
@@ -243,6 +246,7 @@ export default function Portfolio() {
                   link={memo.source}
                 />
               ))}
+              </div>
             </div>
             {/* <div className="text-center mt-12">
               <Button variant="outline" asChild>
@@ -255,13 +259,13 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section
         id="contact"
         ref={(el) => {(sectionRefs.current.contact = el)}}
         className="py-16 md:py-24"
       >
-        <div className="container px-4 md:px-6">
+        
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollAnimatedSection>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Get In Touch
@@ -333,10 +337,11 @@ export default function Portfolio() {
         </div>
       </div>
     </section> */}
+    
 
       {/* Footer */}
       <footer className="border-t py-6 md:py-8">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-muted-foreground">
