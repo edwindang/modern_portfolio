@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { FaMoon, FaSun } from "react-icons/fa"
 
 export default function DarkModeToggle() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   useEffect(() => {
     // Check for user preference
