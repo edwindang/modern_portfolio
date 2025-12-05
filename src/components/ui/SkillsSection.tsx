@@ -22,8 +22,8 @@ interface SkillCategory {
   color: string;
 }
 
-const SkillsSection = forwardRef<HTMLElement, {}>(
-  function AboutSection(props, ref) {
+const SkillsSection = forwardRef<HTMLElement, Record<string, never>>(
+  function AboutSection(_props, ref) {
     const [activeCategory, setActiveCategory] = useState<string>("product");
 
     const skillCategories: SkillCategory[] = [

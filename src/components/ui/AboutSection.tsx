@@ -4,7 +4,8 @@ import { forwardRef, useRef } from "react"
 import { motion, useScroll } from "framer-motion"
 import DevelopmentImpactAnimation from "./DevelopmentImpactAnimation"
 
-const AboutSection = forwardRef<HTMLElement, {}>(function AboutSection(props, ref) {
+const AboutSection = forwardRef<HTMLElement, Record<string, never>>
+(function AboutSection(_props, ref) {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
