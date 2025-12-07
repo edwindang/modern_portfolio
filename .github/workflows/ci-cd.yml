@@ -1,0 +1,65 @@
+name: Portfolio Website CI/CD Gates
+
+on:
+  push:
+    branches:
+      - main
+      - staging # Run CI on the development branch
+  pull_request: # Run checks before merging to main
+    branches:
+      - main
+
+jobs:
+  quality-and-test:
+    runs-on: ubuntu-latest
+    
+    # Define job variables
+    env:
+      NODE_ENV: production
+
+    steps:
+      - name: ⬇️ Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # --- Continuous Integration (CI) Quality Gates ---
+
+      - name: 📦 Install Dependencies
+        # Use a specific install command that Vercel might use (or just 'npm ci' for security)
+        run: npm ci
+
+      - name: 🔎 Run Code Linting (Quality Gate 1)
+        # Ensure you have a 'lint' script in your package.json
+        run: npm run lint
+
+      - name: 🧪 Run Unit and Integration Tests (Quality Gate 2)
+        # Ensure you have a 'test' script in your package.json
+        run: npm test
+        # Interview Point: Discuss test coverage requirements and how pipeline failure here prevents bad code from deployment.
+
+      - name: 🔨 Run Application Build
+        # This confirms the application can successfully compile before Vercel takes over
+        run: npm run build
+        
+      # --- Observability / Deployment Metric Reporting ---
+      
+      # 🐶 Crucial Step for Datadog Interview
+      - name: 📊 Report Deployment Event to Datadog
+        # This step runs only if all previous steps succeeded.
+        if: success() && github.ref == 'refs/heads/main' # Only report when pushing to main
+        run: |
+          echo "Reporting deployment event to Datadog for ${{ github.ref_name }} branch."
+          
+          # In a real environment, you'd use a dedicated Datadog CI Action or a cURL command
+          # to send a deployment marker event, tagging it with the Git SHA.
+          echo "Mock Datadog API Call: Deployment Successful"
+          echo "  - Service: portfolio-website"
+          echo "  - Environment: production"
+          echo "  - Version: ${{ github.sha }}"
+        # Interview Point: Emphasize that this step is what allows the PM/Eng team to 
+        # measure DORA metrics (Deployment Frequency) and correlate performance changes 
+        # (APM data) directly to code releases.

@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -36,8 +38,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
+    "jest": "^30.2.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "supertest": "^7.1.4",
     "tailwindcss": "^4",
     "typescript": "^5.8.2"
   }

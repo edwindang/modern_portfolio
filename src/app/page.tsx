@@ -22,6 +22,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {RESUME_LINK} from '@/config/data';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
@@ -136,7 +137,7 @@ export default function Portfolio() {
             </p>
             <div className="flex gap-4 mt-6">
             <Button asChild>
-                <Link href="https://drive.google.com/file/d/1ewfyoiSF3L3wsRGNJwsDgdh2WDOrUJLj/view?usp=sharing" target="_blank">
+                <Link href={RESUME_LINK} target="_blank">
                   View Resume <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
