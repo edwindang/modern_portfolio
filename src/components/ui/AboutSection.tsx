@@ -1,16 +1,19 @@
 "use client"
 
-import { forwardRef, useRef } from "react"
+import React, { forwardRef, useRef } from "react"
 import { motion, useScroll } from "framer-motion"
 import DevelopmentImpactAnimation from "./DevelopmentImpactAnimation"
 
-const AboutSection = forwardRef<HTMLElement, Record<string, never>>
+type AboutSectionProps = React.HTMLAttributes<HTMLElement>;
+
+const AboutSection = forwardRef<HTMLElement, AboutSectionProps>
 (function AboutSection(_props, ref) {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
   })
+
 
 
   return (

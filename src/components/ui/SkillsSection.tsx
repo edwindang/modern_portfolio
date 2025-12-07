@@ -22,7 +22,9 @@ interface SkillCategory {
   color: string;
 }
 
-const SkillsSection = forwardRef<HTMLElement, Record<string, never>>(
+type SkillsSectionProps = React.HTMLAttributes<HTMLElement>;
+
+const SkillsSection = forwardRef<HTMLElement, SkillsSectionProps>(
   function AboutSection(_props, ref) {
     const [activeCategory, setActiveCategory] = useState<string>("product");
 
