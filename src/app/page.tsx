@@ -136,7 +136,7 @@ export default function Portfolio() {
             </p>
             <div className="flex gap-4 mt-6">
             <Button asChild>
-                <Link href="https://drive.google.com/file/d/1ewfyoiSF3L3wsRGNJwsDgdh2WDOrUJLj/view?usp=sharing" target="_blank">
+                <Link href="https://drive.google.com/file/d/1ctPCTL5VVcnuldU1lb2lx2De2KtFjPtq/view?usp=sharing" target="_blank">
                   View Resume <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
