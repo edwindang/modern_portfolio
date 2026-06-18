@@ -22,10 +22,10 @@ interface SkillCategory {
   color: string;
 }
 
-type SkillsSectionProps = React.HTMLAttributes<HTMLElement>;
-
-const SkillsSection = forwardRef<HTMLElement, SkillsSectionProps>(
-  function AboutSection(_props, ref) {
+type SkillsSectionProps = React.HTMLAttributes<HTMLElement> & {
+  ref?: React.Ref<HTMLElement>;
+};
+export default function SkillsSection({ ref, ...props }: SkillsSectionProps) {
     const [activeCategory, setActiveCategory] = useState<string>("product");
 
     const skillCategories: SkillCategory[] = [
@@ -196,7 +196,4 @@ const SkillsSection = forwardRef<HTMLElement, SkillsSectionProps>(
         </div>
       </section>
     );
-  }
-);
-
-export default SkillsSection;
+}

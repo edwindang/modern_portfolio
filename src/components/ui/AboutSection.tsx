@@ -4,18 +4,12 @@ import React, { forwardRef, useRef } from "react"
 import { motion, useScroll } from "framer-motion"
 import DevelopmentImpactAnimation from "./DevelopmentImpactAnimation"
 
-type AboutSectionProps = React.HTMLAttributes<HTMLElement>;
+// Define ref as a standard prop
+type AboutSectionProps = React.HTMLAttributes<HTMLElement> & {
+  ref?: React.Ref<HTMLElement>;
+};
 
-const AboutSection = forwardRef<HTMLElement, AboutSectionProps>
-(function AboutSection(_props, ref) {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  })
-
-
-
+export default function AboutSection({ ref, ...props }: AboutSectionProps) {
   return (
     <section
       id="about"
@@ -74,6 +68,4 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>
       </div>
     </section>
   )
-})
-
-export default AboutSection
+}
