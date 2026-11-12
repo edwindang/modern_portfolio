@@ -86,16 +86,16 @@ export default function SkillsSection({ ref, ...props }: SkillsSectionProps) {
       },
       {
         id: "finance",
-        title: "Finance/Investing/Quant",
+        title: "Equity Research & Valuation",
         icon: <BarChart4 className="h-6 w-6" />,
         description:
-          "Applying quantitative methods and financial expertise to drive investment strategies and business decisions.",
+          "Researching public companies and building valuation models to form investment theses.",
         skills: [
           "Financial Modeling",
           "DCF Analysis",
           "Equity Valuation",
-          "Market Data APIs",
-          "Accounting Principles",
+          "Financial Statement Analysis",
+          "Industry & Competitive Analysis"
         ],
         color: "from-amber-500 to-orange-500",
       },
